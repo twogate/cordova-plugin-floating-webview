@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-  xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-sign-in-with-apple" version="0.0.1">
-  <name>cordova-plugin-sign-in-with-apple</name>
+  xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-floating-webview" version="0.0.1">
+  <name>cordova-plugin-floating-webview</name>
 
-  <description>Sign in with Apple</description>
+  <description>Floating WebView</description>
   <license>MIT</license>
 
-  <keywords>cordova,ios,apple,sign in with apple</keywords>
-  <repo>https://github.com/twogate/cordova-plugin-sign-in-with-apple.git</repo>
-  <issue>https://github.com/twogate/cordova-plugin-sign-in-with-apple/issues</issue>
+  <keywords>cordova,ios,apple</keywords>
+  <repo>https://github.com/twogate/cordova-plugin-floating-webview.git</repo>
+  <issue>https://github.com/twogate/cordova-plugin-floating-webview/issues</issue>
 
   <engines>
     <engine name="cordova" version=">=8.0.0"/>
