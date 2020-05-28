@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-sign-in-with-apple" version="0.0.1">
+  <name>cordova-plugin-sign-in-with-apple</name>
+
+  <description>Sign in with Apple</description>
+  <license>MIT</license>
+
+  <keywords>cordova,ios,apple,sign in with apple</keywords>
+  <repo>https://github.com/twogate/cordova-plugin-sign-in-with-apple.git</repo>
+  <issue>https://github.com/twogate/cordova-plugin-sign-in-with-apple/issues</issue>
+
+  <engines>
+    <engine name="cordova" version=">=8.0.0"/>
+    <engine name="cordova-ios" version=">=4.5.0"/>
+    <!--<engine name="apple-ios" version=">=13.0" />-->
+  </engines>
+
+  <js-module src="www/floating-webview.js" name="FloatingWebview">
+    <clobbers target="cordova.plugins.FloatingWebview" />
+  </js-module>
+  <platform name="ios">
+
+    <config-file target="config.xml" parent="/*">
+      <feature name="FloatingWebview">
+        <param name="ios-package" value="FloatingWebview" />
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+    <source-file src="src/ios/FloatingWebview.h" />
+    <source-file src="src/ios/FloatingWebview.m" />
+
+    <config-file parent="com.apple.developer.floatingwebview" target="*/Entitlements-Debug.plist">
+      <array>
+        <string>Default</string>
+      </array>
+		</config-file>
+    <config-file parent="com.apple.developer.floatingwebview" target="*/Entitlements-Release.plist">
+      <array>
+        <string>Default</string>
+      </array>
+    </config-file>
+<!--<hook type="after_prepare" src="scripts/after_prepare.js" />-->
+  </platform>
+</plugin>
